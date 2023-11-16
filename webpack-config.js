@@ -16,6 +16,20 @@ module.exports = {
             },
             //ここから追加
             {
+                test: /\.(png|jpg|gif|svg)/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[hash].[ext]',
+                            outputPath : 'images',
+                            publicPath: './images'
+                        }
+                    },
+                    'image-webpack-loader',
+                ]
+            },            
+            {
                 test: /\.pug/,
                 use: [
                     {

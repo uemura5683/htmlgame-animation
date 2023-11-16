@@ -1,2 +1,2 @@
-body{margin:0}
+html,body{margin:0;background-color:#D7D3E7;height:100%}#container{display:grid;place-content:center;place-items:center;height:100%}.l-game-box{width:1200px;border:15px solid #8E97E9;box-sizing:border-box;background-color:#D7D3E7;padding:15px}
 

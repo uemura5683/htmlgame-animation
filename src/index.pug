@@ -1,10 +1,46 @@
 <!DOCTYPE html>
 html
     head
-        meta(http-equiv='content-type',content='text/html charset=utf-8')
-        meta(description='tetoris pug/scss animationページです')
-        meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no')
-        title Tetoris pug/scss animation
-        link(href='style.css', type='text/css', rel='stylesheet')
+      meta(http-equiv='content-type',content='text/html charset=utf-8')
+      meta(description='tetoris pug/scss animationページです')
+      meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no')
+      title html game animation pug/scss animation
+      link(href='style.css', type='text/css', rel='stylesheet')
     body
-        #container
+      #container
+        .l-game-box
+          .m-game-box-left
+            .m-game-box-score
+              .c-title Score
+              .c-score-wrap
+                .c-score-data 1507
+            .m-game-box-rank
+              .c-title Rank
+              .c-rank-wrap
+                .c-rank.c-ranl1
+                  span.c-rank-num1
+                    img(src="/images/no_1.svg" alt="No.1" width="40")
+                  span.c-rank-score 1988
+                .c-rank.c-ranl2
+                  span.c-rank-num2
+                    img(src="/images/no_2.svg" alt="No.2" width="40")
+                  span.c-rank-score 1376
+                .c-rank.c-ranl3
+                  span.c-rank-num3
+                    img(src="/images/no_3.svg" alt="No.3" width="40")
+                  span.c-rank-score 0235
+          .m-game-box-center
+          .m-game-box-right
+            .m-game-box-next
+              .c-title Next
+              .c-next-wrap
+            .m-game-box-rings
+              .c-title Rings
+              .c-game-wrap
+                img(src="/images/go.svg" alt="Go" width="40")
+                img(src="/images/py.svg" alt="Phython" width="40")
+                img(src="/images/pug.svg" alt="Pug" width="40")
+                img(src="/images/ts.svg" alt="TypeScript" width="40")
+                img(src="/images/js.svg" alt="JavaScript" width="40")
+                img(src="/images/css.svg" alt="CSS" width="40")
+                img(src="/images/html.svg" alt="HTML" width="40")
