@@ -48,7 +48,10 @@ $white: #FFFFFF;
   z-index: 1;
   opacity: .5;  
 }
-
+@mixin anime {
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
 html, body {
   margin: 0;
   background-color: $purple;
@@ -65,12 +68,23 @@ html, body {
   border: 15px solid $purple2;
   box-sizing: border-box;
   background-color: $purple;
-  padding: 15px;
+  padding: 15px 20px;
   display: grid;
-  grid-template-columns: 27% 46% 27%;
+  grid-template-columns: 27% 44% 29%;
 }
 .c-title {
   @include fontSet;
+}
+.m-game-box-left,
+.m-game-box-center,
+.m-game-box-right {
+  place-content: center;
+  display: grid;
+}
+.m-game-box-center {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  margin: 20px;
 }
 .c-score {
   &-wrap {
@@ -133,6 +147,105 @@ html, body {
     margin-left: -25px;
   }
 }
+.c-box {
+  &-wrap {
+    position: relative;
+  }
+  &-wrap-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $white;
+    z-index: 1;
+    opacity: .5; 
+  }
+  &-anime {
+    visibility: hidden;
+    position: absolute;
+    font-size: 0;
+    transform: translate(0, -100%) scale(1, 1);
+  }
+  &-anime1 {
+    animation: anime1 4.7s ease-in-out infinite;
+    left: 40%;
+    @include anime;
+  }
+  &-anime2 {
+    animation: anime2 2s ease-in-out infinite 2.7s;
+    transform: translate(0, 0%) scale(1, 1) rotate(-30deg);
+    left: 40%;
+    @include anime;
+  }
+  &-anime3 {
+    animation: anime3 2s ease-in-out infinite 4.7s;
+    transform: translate(0, 0%) scale(1, 1) rotate(-30deg);
+    left: 45%;
+    @include anime;
+  }
+  &-anime4 {
+    animation: anime4 2s ease-in-out infinite 4.9s;
+    transform: translate(0, 0%) scale(1, 1) rotate(-30deg);
+    left: 45%;
+    @include anime;
+  }
+  &-anime5 {
+    animation: anime5 3.3s ease-in-out infinite 6.7s;
+    transform: translate(0, 0%) scale(1, 1) rotate(-30deg);
+    left: 45%;
+    @include anime;
+  }
+  &-anime6 {
+    animation: anime6 3.2s ease-in-out infinite 6.8s;
+    transform: translate(0, 0%) scale(1, 1) rotate(-30deg);
+    left: 25%;
+    @include anime;
+  }  
+}
+@keyframes anime1 {
+  0% { top: 0%; left: 40%; visibility: hidden; transform: translate(0, 0%) scale(1, 1);}
+  1% { top: 0%; left: 40%; visibility: visible; transform: translate(0, -1%) scale(1, 1);}
+  38% { top: 100%; left: 40%; visibility: visible; transform: translate(0, -100%) scale(1, 1);} 
+  40% { top: 100%; left: 40%; visibility: visible; transform: translate(0, -100%) scale(1.2, 0.8);}
+  42% { top: 100%; left: 40%; visibility: visible; transform: translate(0, -100%) scale(1, 1);}
+  50% { top: 99.5%; left: 40%; visibility: visible; transform: translate(0, -99.5%) scale(1, 1);}
+  52% { top: 100%; left: 40%; visibility: visible; transform: translate(0, -100%) scale(1, 1);}
+  70% { top: 100%; left: 43%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(30deg);}
+  100% { top: 100%; left: 43%; visibility: hidden; transform: translate(0, -100%) scale(1, 1) rotate(30deg);}
+}
+@keyframes anime2 {
+  0% { top: 0%; left: 48%; visibility: hidden; transform: translate(0, 0%) scale(1, 1) rotate(-30deg);}
+  1% { top: 0%; left: 48%; visibility: visible; transform: translate(0, -1%) scale(1, 1) rotate(-30deg);}
+  99% { top: calc(100% - 18px); left: 48%; visibility: visible; transform: translate(0, calc(-100% - 18px)) scale(1, 1) rotate(-30deg);}
+  100% { top: calc(100% - 18px); left: 48%; visibility: hidden; transform: translate(0, calc(-100% - 18px)) scale(1, 1) rotate(-30deg);}
+}
+@keyframes anime3 {
+  0% { top: 100%; left: 43%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(60deg);}
+  99% { top: 100%; left: 43%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(60deg);}
+  100% { top: 100%; left: 43%; visibility: hidden; transform: translate(0, -100%) scale(1, 1) rotate(60deg);}
+}
+@keyframes anime4 {
+  0% { top: 0%; left: 45%; visibility: hidden; transform: translate(0, 0%) scale(1, 1) rotate(-30deg);}
+  1% { top: 0%; left: 45%; visibility: visible; transform: translate(0, -1%) scale(1, 1) rotate(-30deg);}
+  89% { top: calc(100% - 28px); left: 45%; visibility: visible; transform: translate(0, calc(-100% - 28px)) scale(1, 1) rotate(-30deg);}
+  90%, 100% { top: calc(100% - 28px); left: 45%; visibility: hidden; transform: translate(0, calc(-100% - 28px)) scale(1, 1) rotate(-30deg);}
+}
+@keyframes anime5 {
+  0% { top: 100%; left: 45%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(10deg);}
+  99% { top: 100%; left: 45%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(10deg);}
+  100% { top: 100%; left: 45%; visibility: hidden; transform: translate(0, -100%) scale(1, 1) rotate(10deg);}
+}
+@keyframes anime6 {
+  0% { top: 0%; left: 26%; visibility: hidden; transform: translate(0, 0%) scale(1, 1);}
+  1% { top: 0%; left: 26%; visibility: visible; transform: translate(0, -1%) scale(1, 1);}
+  68% { top: 100%; left: 26%; visibility: visible; transform: translate(0, -100%) scale(1, 1);} 
+  70% { top: 100%; left: 26%; visibility: visible; transform: translate(0, -100%) scale(1.2, 0.8);}
+  75% { top: 100%; left: 26%; visibility: visible; transform: translate(0, -100%) scale(1, 1);}
+  80% { top: 99.5%; left: 26%; visibility: visible; transform: translate(0, -99.5%) scale(1, 1);}
+  85% { top: 100%; left: 26%; visibility: visible; transform: translate(0, -100%) scale(1, 1);}
+  100% { top: 100%; left: 28%; visibility: hidden; transform: translate(0, -100%) scale(1, 1) rotate(20deg);}
+}
 .c-next {
   &-wrap {
     @include wrap;
@@ -142,6 +255,21 @@ html, body {
     &:after {
       @include circlebg;
     }
+  }
+  &-anime {
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	z-index: 10;
+  	visibility: hidden;
+  	&.c-next-anime1 {
+  	  visibility: visible;
+  	}
+  }
+  &-images {
+    z-index: 10;
+    position: relative;
   }
 }
 .c-rings {
@@ -178,23 +306,23 @@ html, body {
     }
     &:nth-child(2) {
       right: 7px;
-      top: 120px;  
+      top: 130px;  
     }
     &:nth-child(3) {
-      right: 26px;
-      top: 205px;
+      right: 40px;
+      top: 220px;
     }
     &:nth-child(4) {
       right: 137px;
       top: 265px;
     }
     &:nth-child(5) {
-      right: 240px;
-      top: 205px;
+      right: 230px;
+      top: 220px;
     }
     &:nth-child(6) {
       right: 262px;
-      top: 120px;
+      top: 130px;
     }
     &:nth-child(7) {
       right: 220px;
