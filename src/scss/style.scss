@@ -3,8 +3,8 @@ $purple2: #8E97E9;
 $white: #FFFFFF;
 
 @mixin fontSet {
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 30px;
+  line-height: 30px;
   position: relative;
   z-index: 20;
 }
@@ -99,6 +99,14 @@ html, body {
   &-data-inner {
     z-index: 2;
     @include fontSet;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    &:first-child {
+      visibility: visible;
+    }
   }
 }
 .c-rank {
@@ -202,6 +210,12 @@ html, body {
     left: 25%;
     @include anime;
   }  
+  &-anime7 {
+    animation: anime7 3.2s ease-in-out infinite 10s;
+    transform: translate(0, 0%) scale(1, 1) rotate(-30deg);
+    left: 45%;
+    @include anime;
+  }
 }
 @keyframes anime1 {
   0% { top: 0%; left: 40%; visibility: hidden; transform: translate(0, 0%) scale(1, 1);}
@@ -245,6 +259,11 @@ html, body {
   80% { top: 99.5%; left: 26%; visibility: visible; transform: translate(0, -99.5%) scale(1, 1);}
   85% { top: 100%; left: 26%; visibility: visible; transform: translate(0, -100%) scale(1, 1);}
   100% { top: 100%; left: 28%; visibility: hidden; transform: translate(0, -100%) scale(1, 1) rotate(20deg);}
+}
+@keyframes anime7 {
+  0% { top: 100%; left: 35%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(-10deg);}
+  99% { top: 100%; left: 35%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(-10deg);}
+  100% { top: 100%; left: 35%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(-10deg);}
 }
 .c-next {
   &-wrap {
