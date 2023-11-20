@@ -104,9 +104,9 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
     visibility: hidden;
-    &:first-child {
-      visibility: visible;
-    }
+  }
+  &-data-inner-1 {
+  	visibility: visible;
   }
 }
 .c-rank {
@@ -211,11 +211,23 @@ html, body {
     @include anime;
   }  
   &-anime7 {
-    animation: anime7 3.2s ease-in-out infinite 10s;
+    animation: anime7 1.7s ease-in-out infinite 10s;
     transform: translate(0, 0%) scale(1, 1) rotate(-30deg);
     left: 45%;
     @include anime;
   }
+  &-anime8 {
+    animation: anime8 1.8s ease-in-out infinite 10.1s;
+    transform: translate(0, 0%) scale(1, 1) rotate(-30deg);
+    left: 45%;
+    @include anime;
+  }
+  &-anime9 {
+    animation: anime9 1.7s ease-in-out infinite 11.7s;
+    transform: translate(0, 0%) scale(1, 1) rotate(-30deg);
+    left: 45%;
+    @include anime;
+  }  
 }
 @keyframes anime1 {
   0% { top: 0%; left: 40%; visibility: hidden; transform: translate(0, 0%) scale(1, 1);}
@@ -261,6 +273,17 @@ html, body {
   100% { top: 100%; left: 28%; visibility: hidden; transform: translate(0, -100%) scale(1, 1) rotate(20deg);}
 }
 @keyframes anime7 {
+  0% { top: 100%; left: 35%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(-10deg);}
+  99% { top: 100%; left: 35%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(-10deg);}
+  100% { top: 100%; left: 35%; visibility: hidden; transform: translate(0, -100%) scale(1, 1) rotate(-10deg);}
+}
+@keyframes anime8 {
+  0% { top: 0%; left: 45%; visibility: hidden; transform: translate(0, 0%) scale(1, 1) rotate(-30deg);}
+  1% { top: 0%; left: 45%; visibility: visible; transform: translate(0, -1%) scale(1, 1) rotate(-30deg);}
+  89% { top: calc(100% - 55px); left: 45%; visibility: visible; transform: translate(0, calc(-100% - 55px)) scale(1, 1) rotate(-30deg);}
+  90%, 100% { top: calc(100% - 55px); left: 45%; visibility: hidden; transform: translate(0, calc(-100% - 55px)) scale(1, 1) rotate(-30deg);}
+}
+@keyframes anime9 {
   0% { top: 100%; left: 35%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(-10deg);}
   99% { top: 100%; left: 35%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(-10deg);}
   100% { top: 100%; left: 35%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(-10deg);}
