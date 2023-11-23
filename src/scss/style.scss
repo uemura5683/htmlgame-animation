@@ -245,7 +245,13 @@ html, body {
     transform: translate(0, 0%) scale(1, 1) rotate(-10deg);
     left: 15%;
     @include anime;
-  }  
+  }
+  &-anime13 {
+    animation: anime13 2.3s ease-in-out infinite 16.8s;
+    transform: translate(0, 0%) scale(1, 1) rotate(-30deg);
+    left: 59%;
+    @include anime;
+  }
 }
 @keyframes anime1 {
   0% { top: 0%; left: 40%; visibility: hidden; transform: translate(0, 0%) scale(1, 1);}
@@ -326,8 +332,17 @@ html, body {
 }
 @keyframes anime12 {
   0% { top: 100%; left: 15%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(-10deg);}
-  99% { top: 100%; left: 15%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(-10deg);}
   100% { top: 100%; left: 15%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(-10deg);}
+}
+@keyframes anime13 {
+  0% { top: 0%; left: 59%; visibility: hidden; transform: translate(0, 0%) scale(1, 1);}
+  1% { top: 0%; left: 59%; visibility: visible; transform: translate(0, -1%) scale(1, 1);}
+  68% { top: 100%; left: 59%; visibility: visible; transform: translate(0, -100%) scale(1, 1);} 
+  70% { top: 100%; left: 59%; visibility: visible; transform: translate(0, -100%) scale(1.2, 0.8);}
+  75% { top: 100%; left: 59%; visibility: visible; transform: translate(0, -100%) scale(1, 1);}
+  80% { top: 99.5%; left: 59%; visibility: visible; transform: translate(0, -99.5%) scale(1, 1);}
+  85% { top: 100%; left: 59%; visibility: visible; transform: translate(0, -100%) scale(1, 1);}
+  100% { top: 100%; left: 63%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(20deg);}
 }
 .c-next {
   &-wrap {
