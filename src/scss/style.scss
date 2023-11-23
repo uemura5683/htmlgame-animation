@@ -241,15 +241,27 @@ html, body {
     @include anime;
   }
   &-anime12 {
-    animation: anime12 1.7s ease-in-out infinite 16.7s;
+    animation: anime12 1.7s ease-in-out infinite 16.7s,
+    		   anime12_2 1.3s ease-in-out infinite 20.4s;
     transform: translate(0, 0%) scale(1, 1) rotate(-10deg);
     left: 15%;
     @include anime;
   }
   &-anime13 {
-    animation: anime13 2.3s ease-in-out infinite 16.8s;
+    animation: anime13 2.3s ease-in-out infinite 16.8s,
+    		   anime13_2 1.3s ease-in-out infinite 20.4s;
     transform: translate(0, 0%) scale(1, 1) rotate(-30deg);
     left: 59%;
+    @include anime;
+  }
+  &-anime14 {
+    animation: anime14 1.3s ease-in-out infinite 19.1s,
+			   anime14_2 1.3s ease-in-out infinite 20.4s;
+    transform: translate(0, 0%) scale(1, 1) rotate(-30deg);
+    left: 50%;
+    @include anime;
+  }
+  &-anime14_2 {
     @include anime;
   }
 }
@@ -334,6 +346,10 @@ html, body {
   0% { top: 100%; left: 15%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(-10deg);}
   100% { top: 100%; left: 15%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(-10deg);}
 }
+@keyframes anime12_2 {
+  0% { top: 100%; left: 15%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(-10deg);}
+  100% { top: 100%; left: 0%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(-10deg);}
+}
 @keyframes anime13 {
   0% { top: 0%; left: 59%; visibility: hidden; transform: translate(0, 0%) scale(1, 1);}
   1% { top: 0%; left: 59%; visibility: visible; transform: translate(0, -1%) scale(1, 1);}
@@ -343,6 +359,20 @@ html, body {
   80% { top: 99.5%; left: 59%; visibility: visible; transform: translate(0, -99.5%) scale(1, 1);}
   85% { top: 100%; left: 59%; visibility: visible; transform: translate(0, -100%) scale(1, 1);}
   100% { top: 100%; left: 63%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(20deg);}
+}
+@keyframes anime13_2 {
+  0% { top: 100%; left: 63%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(20deg);}
+  100% { top: 100%; left: 74%; visibility: visible; transform: translate(0, -100%) scale(1, 1) rotate(40deg);}
+}
+@keyframes anime14 {
+  0% { top: 0%; left: 53%; visibility: hidden; transform: translate(0, 0%) scale(1, 1);}
+  1% { top: 0%; left: 53%; visibility: visible; transform: translate(0, -1%) scale(1, 1);}
+  100% { top: 70%; left: 53%; visibility: visible; transform: translate(0, -70%) scale(1, 1);} 
+}
+@keyframes anime14_2 {
+  0% { top: 70%; left: 53%; visibility: visible; transform: translate(0, -70%) scale(1, 1);} 
+  40% { top: 70%; left: 53%; visibility: visible; transform: translate(0, -70%) scale(1, 1);} 
+  100% { top: 87%; left: 43%; visibility: visible; transform: translate(0, -87%) scale(1, 1);}
 }
 .c-next {
   &-wrap {
