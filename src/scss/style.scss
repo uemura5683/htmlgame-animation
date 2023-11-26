@@ -107,10 +107,72 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
     visibility: hidden;
+    width: 90%;
+    background: #EBE8F4;
   }
   &-data-inner-1 {
-  	visibility: visible;
+    visibility: visible;
+    animation: data_v_anime 1s ease-in-out infinite 1s,
+               data_h_anime .1s ease-in-out infinite 2.7s;
+    @include anime;
   }
+  &-data-inner-2 {
+    animation: data_v_anime 1s ease-in-out infinite 2.8s,
+               data_h_anime .1s ease-in-out infinite 4.7s;
+    @include anime;
+  }
+  &-data-inner-3 {
+    animation: data_v_anime 1s ease-in-out infinite 4.8s,
+               data_h_anime .1s ease-in-out infinite 6.7s;
+    @include anime;
+  }
+  &-data-inner-4 {
+    animation: data_v_anime 1s ease-in-out infinite 6.8s,
+               data_h_anime .1s ease-in-out infinite 10s;
+    @include anime;
+  }
+  &-data-inner-5 {
+    animation: data_v_anime 1s ease-in-out infinite 10.1s,
+               data_h_anime .1s ease-in-out infinite 11.7s;
+    @include anime;
+  }
+  &-data-inner-6 {
+    animation: data_v_anime 1s ease-in-out infinite 11.8s,
+               data_h_anime .1s ease-in-out infinite 15.0s;
+    @include anime;
+  }  
+  &-data-inner-7 {
+    animation: data_v_anime 1s ease-in-out infinite 15.1s,
+               data_h_anime .1s ease-in-out infinite 16.7s;
+    @include anime;
+  }
+  &-data-inner-8 {
+    animation: data_v_anime 1s ease-in-out infinite 16.8s,
+               data_h_anime .1s ease-in-out infinite 19.1s;
+    @include anime;
+  }
+  &-data-inner-9 {
+    animation: data_v_anime 1s ease-in-out infinite 19.2s,
+               data_h_anime .1s ease-in-out infinite 21.8s;
+    @include anime;
+  }
+  &-data-inner-10 {
+    animation: data_v_anime 1s ease-in-out infinite 21.9s,
+               data_h_anime .1s ease-in-out infinite 23.2s;
+    @include anime;
+  }
+  &-data-inner-11 {
+    animation: data_v_anime 1s ease-in-out infinite 23.3s;
+    @include anime;
+  }
+}
+@keyframes data_v_anime {
+  0% { visibility: hidden; } 
+  100% { visibility: visible; }
+}
+@keyframes data_h_anime {
+  0% { visibility: visible; } 
+  100% { visibility: hidden; }
 }
 @keyframes scoremove{
   0%{
@@ -493,14 +555,74 @@ html, body {
   	transform: translate(-50%, -50%);
   	z-index: 10;
   	visibility: hidden;
-  	&.c-next-anime1 {
-  	  visibility: visible;
-  	}
   }
+  &-anime1 {
+    visibility: visible;
+    animation: next_v_anime 1s ease-in-out infinite 1s,
+               next_h_anime .1s ease-in-out infinite 2.7s;
+    @include anime;
+  }
+  &-anime2 {
+    animation: next_v_anime 1s ease-in-out infinite 2.8s,
+               next_h_anime .1s ease-in-out infinite 4.7s;
+    @include anime;
+  }
+  &-anime3 {
+    animation: next_v_anime 1s ease-in-out infinite 4.8s,
+               next_h_anime .1s ease-in-out infinite 6.7s;
+    @include anime;
+  }
+  &-anime4 {
+    animation: next_v_anime 1s ease-in-out infinite 6.8s,
+               next_h_anime .1s ease-in-out infinite 10s;
+    @include anime;
+  }
+  &-anime5 {
+    animation: next_v_anime 1s ease-in-out infinite 10.1s,
+               next_h_anime .1s ease-in-out infinite 11.7s;
+    @include anime;
+  }
+  &-anime6 {
+    animation: next_v_anime 1s ease-in-out infinite 11.8s,
+               next_h_anime .1s ease-in-out infinite 15.0s;
+    @include anime;
+  }  
+  &-anime7 {
+    animation: next_v_anime 1s ease-in-out infinite 15.1s,
+               next_h_anime .1s ease-in-out infinite 16.7s;
+    @include anime;
+  }
+  &-anime8 {
+    animation: next_v_anime 1s ease-in-out infinite 16.8s,
+               next_h_anime .1s ease-in-out infinite 19.1s;
+    @include anime;
+  }
+  &-anime9 {
+    animation: next_v_anime 1s ease-in-out infinite 19.2s,
+               next_h_anime .1s ease-in-out infinite 21.8s;
+    @include anime;
+  }
+  &-anime10 {
+    animation: next_v_anime 1s ease-in-out infinite 21.9s,
+               next_h_anime .1s ease-in-out infinite 23.2s;
+    @include anime;
+  }
+  &-anime11 {
+    animation: next_v_anime 1s ease-in-out infinite 23.3s;
+    @include anime;
+  }  
   &-images {
     z-index: 10;
     position: relative;
   }
+}
+@keyframes next_v_anime {
+  0% { visibility: hidden; } 
+  100% { visibility: visible; }
+}
+@keyframes next_h_anime {
+  0% { visibility: visible; } 
+  100% { visibility: hidden; }
 }
 @keyframes nextmove{
   0%{
