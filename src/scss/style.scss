@@ -71,6 +71,7 @@ html, body {
   padding: 15px 20px;
   display: grid;
   grid-template-columns: 27% 44% 29%;
+  filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.4));
 }
 .c-title {
   @include fontSet;
@@ -94,6 +95,7 @@ html, body {
     animation-duration: 1.1s;      
   }
   &-data {
+    box-shadow: -3px -3px 6px 0px #dcdcdc, 6px 6px 6px rgba(0, 0, 0, 0.4);
     @include wrap-inner;
     &:after {
       @include circlebg;
@@ -107,72 +109,63 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
     visibility: hidden;
-    width: 90%;
+    width: max-content;
     background: #EBE8F4;
   }
   &-data-inner-1 {
     visibility: visible;
-    animation: data_v_anime 1s ease-in-out infinite 1s,
-               data_h_anime .1s ease-in-out infinite 2.7s;
     @include anime;
   }
   &-data-inner-2 {
-    animation: data_v_anime 1s ease-in-out infinite 2.8s,
-               data_h_anime .1s ease-in-out infinite 4.7s;
+    animation: data_v_anime .3s ease-in-out infinite 2.8s;
     @include anime;
   }
   &-data-inner-3 {
-    animation: data_v_anime 1s ease-in-out infinite 4.8s,
-               data_h_anime .1s ease-in-out infinite 6.7s;
+    animation: data_v_anime .3s ease-in-out infinite 4.8s;
     @include anime;
   }
   &-data-inner-4 {
-    animation: data_v_anime 1s ease-in-out infinite 6.8s,
-               data_h_anime .1s ease-in-out infinite 10s;
+    animation: data_v_anime .3s ease-in-out infinite 6.8s;
     @include anime;
   }
   &-data-inner-5 {
-    animation: data_v_anime 1s ease-in-out infinite 10.1s,
-               data_h_anime .1s ease-in-out infinite 11.7s;
+    animation: data_v_anime .3s ease-in-out infinite 10.1s;
     @include anime;
   }
   &-data-inner-6 {
-    animation: data_v_anime 1s ease-in-out infinite 11.8s,
-               data_h_anime .1s ease-in-out infinite 15.0s;
+    animation: data_v_anime .3s ease-in-out infinite 11.8s;
     @include anime;
   }  
   &-data-inner-7 {
-    animation: data_v_anime 1s ease-in-out infinite 15.1s,
-               data_h_anime .1s ease-in-out infinite 16.7s;
+    animation: data_v_anime .3s ease-in-out infinite 15.1s;
     @include anime;
   }
   &-data-inner-8 {
-    animation: data_v_anime 1s ease-in-out infinite 16.8s,
-               data_h_anime .1s ease-in-out infinite 19.1s;
+    animation: data_v_anime .3s ease-in-out infinite 16.8s;
     @include anime;
   }
   &-data-inner-9 {
-    animation: data_v_anime 1s ease-in-out infinite 19.2s,
-               data_h_anime .1s ease-in-out infinite 21.8s;
+    animation: data_v_anime .3s ease-in-out infinite 19.2s;
     @include anime;
   }
   &-data-inner-10 {
-    animation: data_v_anime 1s ease-in-out infinite 21.9s,
-               data_h_anime .1s ease-in-out infinite 23.2s;
+    animation: data_v_anime .3s ease-in-out infinite 21.9s;
     @include anime;
   }
   &-data-inner-11 {
-    animation: data_v_anime 1s ease-in-out infinite 23.3s;
+    animation: data_v_anime .3s ease-in-out infinite 23.3s;
+    @include anime;
+  }
+  &-data-inner-12 {
+    animation: data_v_anime .3s ease-in-out infinite 24.5s;
     @include anime;
   }
 }
 @keyframes data_v_anime {
-  0% { visibility: hidden; } 
-  100% { visibility: visible; }
-}
-@keyframes data_h_anime {
-  0% { visibility: visible; } 
-  100% { visibility: hidden; }
+  0% { visibility: hidden; transform: scale(1, 1) translate(-50%, -50%);} 
+  1% { visibility: visible; transform: scale(1, 1) translate(-50%, -50%); } 
+  50% { visibility: visible; transform: scale(1.2, 1.2) translate(-45%, -50%); } 
+  100% { visibility: visible; transform: scale(1, 1) translate(-50%, -50%); }
 }
 @keyframes scoremove{
   0%{
@@ -197,6 +190,7 @@ html, body {
     grid-auto-columns: 85%;
     &:after {
       @include boxbg;
+      box-shadow: -3px -3px 6px 0px #dcdcdc, 6px 6px 6px rgba(0, 0, 0, 0.4);
     }
   }
   &-component {
@@ -208,6 +202,7 @@ html, body {
     align-items: center;
     border-radius: 25px;
     padding: 0 30px;
+    filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.4));
     &.c-rank1 {
       background: #FFD9CF;
     }
@@ -246,7 +241,11 @@ html, body {
       background: $white;
       z-index: 1;
       opacity: .5;
+      box-shadow: -3px -3px 6px 0px #dcdcdc, 6px 6px 6px rgba(0, 0, 0, 0.4);
     }
+  }
+  &-images {
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.4));  
   }
   &-anime {
     visibility: hidden;
@@ -546,6 +545,7 @@ html, body {
     @include wrap-inner;
     &:after {
       @include circlebg;
+      box-shadow: -3px -3px 6px 0px #dcdcdc, 6px 6px 6px rgba(0, 0, 0, 0.4);
     }
   }
   &-anime {
@@ -555,62 +555,30 @@ html, body {
   	transform: translate(-50%, -50%);
   	z-index: 10;
   	visibility: hidden;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.4));
   }
   &-anime1 {
     visibility: visible;
-    animation: next_v_anime 1s ease-in-out infinite 1s,
-               next_h_anime .1s ease-in-out infinite 2.7s;
+    animation: next_v_anime 1s ease-in-out infinite 1s;
     @include anime;
   }
   &-anime2 {
-    animation: next_v_anime 1s ease-in-out infinite 2.8s,
-               next_h_anime .1s ease-in-out infinite 4.7s;
+    animation: next_v_anime 1s ease-in-out infinite 2.8s;
     @include anime;
   }
   &-anime3 {
-    animation: next_v_anime 1s ease-in-out infinite 4.8s,
-               next_h_anime .1s ease-in-out infinite 6.7s;
+    animation: next_v_anime 1s ease-in-out infinite 4.8s;
     @include anime;
   }
   &-anime4 {
-    animation: next_v_anime 1s ease-in-out infinite 6.8s,
-               next_h_anime .1s ease-in-out infinite 10s;
+    animation: next_v_anime 1s ease-in-out infinite 6.8s;
     @include anime;
   }
   &-anime5 {
-    animation: next_v_anime 1s ease-in-out infinite 10.1s,
-               next_h_anime .1s ease-in-out infinite 11.7s;
-    @include anime;
-  }
-  &-anime6 {
-    animation: next_v_anime 1s ease-in-out infinite 11.8s,
-               next_h_anime .1s ease-in-out infinite 15.0s;
-    @include anime;
-  }  
-  &-anime7 {
-    animation: next_v_anime 1s ease-in-out infinite 15.1s,
-               next_h_anime .1s ease-in-out infinite 16.7s;
-    @include anime;
-  }
-  &-anime8 {
     animation: next_v_anime 1s ease-in-out infinite 16.8s,
-               next_h_anime .1s ease-in-out infinite 19.1s;
+               next_h_anime .1s ease-in-out infinite 19s;
     @include anime;
   }
-  &-anime9 {
-    animation: next_v_anime 1s ease-in-out infinite 19.2s,
-               next_h_anime .1s ease-in-out infinite 21.8s;
-    @include anime;
-  }
-  &-anime10 {
-    animation: next_v_anime 1s ease-in-out infinite 21.9s,
-               next_h_anime .1s ease-in-out infinite 23.2s;
-    @include anime;
-  }
-  &-anime11 {
-    animation: next_v_anime 1s ease-in-out infinite 23.3s;
-    @include anime;
-  }  
   &-images {
     z-index: 10;
     position: relative;
@@ -645,6 +613,7 @@ html, body {
     height: 310px;
     &:after {
       @include circlebg;
+      box-shadow: -3px -3px 6px 0px #dcdcdc, 6px 6px 6px rgba(0, 0, 0, 0.4);
     }
     &:before {
       content: '';
@@ -658,6 +627,7 @@ html, body {
       transform: translate(-50%, -50%);
       z-index: 10;
       opacity: 1;
+      box-shadow: inset 6px 6px 6px rgba(0, 0, 0, 0.4);
     }
   }
   &-images {
@@ -690,6 +660,9 @@ html, body {
     &:nth-child(7) {
       right: 220px;
       top: 40px;
+    }
+    &-inner {
+      filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.4));    
     }
   }
 }
