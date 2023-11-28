@@ -1,12 +1,17 @@
 $purple: #D7D3E7;
 $purple2: #8E97E9;
+$purple3: #5765df;
 $white: #FFFFFF;
+$gray: #c1c1c1;
+$gray2: #BFBEBE;
+$gray3: #bdbbbb;
 
 @mixin fontSet {
   font-size: 30px;
   line-height: 30px;
   position: relative;
   z-index: 20;
+  text-shadow: 0 -1px 0 $white, 1px 1px 1px $gray;
 }
 @mixin wrap {
   text-align: center;
@@ -71,7 +76,7 @@ html, body {
   padding: 15px 20px;
   display: grid;
   grid-template-columns: 27% 44% 29%;
-  filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.4));
+  filter: drop-shadow(5px 5px 3px $purple3);
 }
 .c-title {
   @include fontSet;
