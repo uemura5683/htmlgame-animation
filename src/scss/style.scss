@@ -5,6 +5,9 @@ $white: #FFFFFF;
 $gray: #c1c1c1;
 $gray2: #dcdcdc;
 
+/**
+* mixin
+**/
 @mixin fontSet {
   font-size: 30px;
   line-height: 30px;
@@ -56,6 +59,10 @@ $gray2: #dcdcdc;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
+
+/**
+* layout
+**/
 html, body {
   margin: 0;
   background-color: $purple;
@@ -77,9 +84,15 @@ html, body {
   grid-template-columns: 27% 44% 29%;
   filter: drop-shadow(5px 5px 3px $purple3);
 }
+/**
+* common
+**/
 .c-title {
   @include fontSet;
 }
+/**
+* modules
+**/
 .m-game-box-left,
 .m-game-box-center,
 .m-game-box-right {
@@ -91,6 +104,9 @@ html, body {
   grid-template-rows: 1fr;
   margin: 20px;
 }
+/**
+* component
+**/
 .c-score {
   &-wrap {
     @include wrap;
